@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - uses: knoxbsd/beastci@9e1ddaaa794f1752ccacff5ee00d96542e752776
+    - uses: knoxbsd/beastci@de52aab015c0fcf81685a0d90528c37c730186d9
       name: Build in FreeBSD Jail
       with: 
         command: make
