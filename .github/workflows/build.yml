@@ -17,4 +17,4 @@ jobs:
       name: Build in FreeBSD Jail
       with: 
         command: make
-        sshkey: ${{ secrets.sshkey }}
+        sshkey: ${{ secrets.SSHKEY }}
