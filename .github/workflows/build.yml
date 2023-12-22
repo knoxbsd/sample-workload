@@ -13,5 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: make
-      run: make
+    - uses: knoxbsd/beastci@3ea22b050615bc2bd31bebba4f5ccaee3dbf9154
+      name: Build in FreeBSD Jail
+      with: 
+        command: make
+        sshkey: ${{ secrets.sshkey }}
