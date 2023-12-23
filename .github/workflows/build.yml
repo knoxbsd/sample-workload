@@ -13,9 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: IPv6 Check
-      run: ping -c1 -6 google.com
-    - uses: knoxbsd/beastci@b9168e2c2e61bf12a50944e9a8a60f1ac85957fc
+    - uses: knoxbsd/beastci@45a9260cffb94d476011189b0c6d02295c1be099
       name: Build in FreeBSD Jail
       with: 
         command: make
