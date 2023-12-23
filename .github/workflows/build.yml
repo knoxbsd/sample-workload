@@ -13,13 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Save Key
-      run: echo "${{ secrets.SSHKEY }}" > key
-    - name: Change Permissions
-      run: chmod 0600 key
-    - name: Log in
-      run: ssh -i key -o StrictHostKeyChecking=no knoxbsd@freebsd.number1engineering.com uname -a
-    - uses: knoxbsd/beastci@de52aab015c0fcf81685a0d90528c37c730186d9
+    - uses: knoxbsd/beastci@825110edf91b6e2856af8372a86388b3a1675a57
       name: Build in FreeBSD Jail
       with: 
         command: make
